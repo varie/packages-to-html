@@ -1,6 +1,6 @@
 import re
 
-with open('status.real', 'r') as f:
+with open('data/status.real', 'r') as f:
     data = f.readlines()
 
 packages = []
@@ -45,7 +45,7 @@ sorted_packages = sorted(packages, key=lambda k: k['name'])
 dictionary = {}
 dictionary['packages'] = sorted_packages
 
-with open('data.json', 'w') as fp:
+with open('data/data.json', 'w') as fp:
     json.dump(dictionary, fp, indent=4)
 
         
